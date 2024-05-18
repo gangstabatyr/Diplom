@@ -24,9 +24,9 @@ def main():
     st.title("Analysis of network threat")
     packet_length = st.number_input('how long is length packet', step=0.1, value=0.0)
     num_packets = st.number_input('how many packets you have?', step=0.1, value=0.0)
-    icmp = st.radio('does your packet has icmp (0 - no, 1 - yes ', (0, 1))
-    tcp = st.radio('does your packet has tcp (0 - no, 1 - yes ', (0, 1))
-    udp = st.radio('does your packet has udp (0 - no, 1 - yes ', (0, 1))
+    icmp = st.radio('does your packet has icmp (0 - no, 1 - yes)', (0, 1))
+    tcp = st.radio('does your packet has tcp (0 - no, 1 - yes)', (0, 1))
+    udp = st.radio('does your packet has udp (0 - no, 1 - yes)', (0, 1))
 
     result = ""
     if st.button("Predict"):
