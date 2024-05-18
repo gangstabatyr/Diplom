@@ -29,7 +29,7 @@ def main():
 
     result = ""
     if st.button("Predict"):
-        result = int(predict_note_authentication(packet_length, num_packets, protocol))
+        result = int(predict_note_authentication(packet_length, num_packets, icmp,tcp, udp))
         if result == 0:
             with st.spinner('Wait for it...'):
                 time.sleep(2)
