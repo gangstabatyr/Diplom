@@ -35,13 +35,15 @@ def main():
             with st.spinner('Wait for it...'):
                 time.sleep(2)
             st.error('You have risk of network threat')
+            st.warning(result)
         elif result == 1:
             with st.spinner('Wait for it...'):
                 time.sleep(2)
             st.success("You don't have risk of network threat")
+            st.warning(result)
         else:
             st.warning("WARNING!!! CODE RED!")
-      st.warning(result)
+          
 
 if __name__ == '__main__':
     main()
