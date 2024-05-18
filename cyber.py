@@ -41,7 +41,7 @@ def main():
             st.success("You don't have risk of network threat")
         else:
             st.warning("WARNING!!! CODE RED!")
-      st.warning(f"WARNING!!! CODE RED!       {result}")
+      st.warning(result)
 
 if __name__ == '__main__':
     main()
