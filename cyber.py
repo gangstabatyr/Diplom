@@ -29,12 +29,17 @@ def main():
 
     result = ""
     if st.button("Predict"):
-        result = int(predict_note_authentication(packet_length, num_packets, icmp,
-                                                 tcp, udp))
+        result = int(predict_note_authentication(packet_length, num_packets, protocol))
         if result == 0:
-            st.success('You have risk of network threat')
+            with st.spinner('Wait for it...'):
+                time.sleep(2)
+            st.error('You have risk of network threat')
+        elif result == 1:
+            with st.spinner('Wait for it...'):
+                time.sleep(2)
+            st.success("You don't have risk of network threat")
         else:
-            st.success('You dont have risk of network threat')
+            st.warning("WARNING!!! CODE RED!")
 
 if __name__ == '__main__':
     main()
